@@ -6,7 +6,7 @@
             <div class="hamburger__line"></div>
         </div>
         <h1>Hello World</h1>
-        <h2>HELP!!!</h2>
+        <h2>this is now a conflict</h2>
     </div>
 </template>
 
