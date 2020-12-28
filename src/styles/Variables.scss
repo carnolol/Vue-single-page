@@ -1,0 +1,29 @@
+// Colors
+
+$white: #ffffff;
+$white-100: #FDFFFC;
+$blue-dark: #011627;
+$cyan: #2EC4B6;
+$red: #E71D36;
+$orange: #FF9F1C;
+$black: #000000;
+
+// Media Queries
+@mixin media-breakpoint-up($name) {
+	// Options
+	$breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 992px,
+		xl: 1200px,
+		xxl: 1400px
+	);
+
+	// Map/Set the min
+	$min: map-get($breakpoints, $name);
+
+	@media (min-width: $min) {
+		@content;
+	}
+}
