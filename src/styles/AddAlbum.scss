@@ -1,0 +1,29 @@
+@import './Variables.scss';
+
+.add-album {
+	border: 3px solid green;
+	margin: 40px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		border: 2px solid yellow;
+    }
+    
+    &__artist-picture-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .artist-picture-wrapper {
+            &__image {
+                height: auto;
+                width: 150px;
+            }
+        }
+    }
+}
