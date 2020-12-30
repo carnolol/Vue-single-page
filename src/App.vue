@@ -3,7 +3,7 @@
     <Header />
     <Hero />
     <AddAlbum v-on:add-album="addAlbum"/>
-    <Artists v-bind:artists="artists" v-on:delete-album="deleteAlbum"/>
+    <Artists v-bind:artists="artists"/>
     <footer class="footer">
       Just some filler text
     </footer>
@@ -99,10 +99,6 @@ export default {
     addAlbum(newAlbum) {
       this.artists = [newAlbum, ...this.artists]
     },
-    deleteAlbum(id) {
-      console.log('trying to delete')
-      this.artists = this.artists.filter(artist => artist.id !== id)
-    }
   }
 };
 </script>

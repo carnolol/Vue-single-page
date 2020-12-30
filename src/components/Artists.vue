@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="artists" v-for="artist in artists" v-bind:key="artist.id">
+		<div class="artists" v-for="(artist) in artists" v-bind:key="artist.id">
 			<h1 class="artists__name">{{ artist.name }}</h1>
 			<img class="artists__picture" :src="artist.pic" alt="Artists picture" />
 
@@ -8,7 +8,7 @@
 			<p class="artists__text" v-if="artist.albums.length > 1">{{ artist.name }} has producded {{ artist.albums.length }} albums!</p>
 			<p class="artists__text" v-else>{{ artist.name }} has producded only {{ artist.albums.length }} album :(</p>
 
-			<Albums v-bind:albums="artist.albums" />
+			<Albums v-bind:albums="artist.albums" v-on:delete-album="deleteAlbum(artist.albums.id)" />
 		</div>
 	</div>
 </template>
@@ -21,7 +21,13 @@ export default {
 	components: {
 		Albums
 	},
-	props: ['artists']
+	props: ['artists'],
+	methods: {
+		deleteAlbum(index) {
+            console.log('trying to delete');
+            this.artists.map(artist => artist.albums.splice(index, 1))
+		}
+	}
 };
 </script>
 

@@ -7,7 +7,6 @@
 		alt="delete artist"/>
 		<img class="albums__artwork"
 			:src="album.artwork"
-			@click="console(album)"
 			alt="album artwork"/>
 
 		<p class="albums__name">name: {{ album.name }}</p>
@@ -20,12 +19,7 @@
 <script>
 export default {
   name: "Albums",
-  props: ["albums"],
-  methods: {
-    console(thing) {
-      console.log("my thing:", thing);
-    },
-  },
+  props: ["albums", "id"]
 };
 </script>
 
