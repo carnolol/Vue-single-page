@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-        <h3>Hero.vue</h3>
+        <img src="https://cdn.wallpapersafari.com/75/44/EYIcJv.jpg"/>
     </div>
 </template>
 

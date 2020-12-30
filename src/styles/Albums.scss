@@ -1,0 +1,35 @@
+@import "./Variables.scss";
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    width: 100vw;
+    position: relative;
+    padding: 25px 0;
+    margin: 25px 0;
+    background: rgba(0, 0, 0, .55);
+
+    &__delete {
+        height: auto;
+        width: 35px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        opacity: .9;
+        cursor: pointer;
+    }
+    &__artwork {
+        margin: auto;
+        width: 330px;
+    }
+
+    &__name {
+        padding-left: 25px;
+        margin: 20px 0;
+    }
+    &__songs {
+        padding-left: 25px;
+        margin: 2px 0;
+    }
+}
