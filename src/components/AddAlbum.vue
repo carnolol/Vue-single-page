@@ -18,7 +18,7 @@
 				<img class="artist-picture-wrapper__image" :src="this.handleAlbumArtwork()" />
 				<input type="text" placeholder="Album Artwork*" required="false" name="albumArtwork" v-model="albumArtwork" />
 			</div>
-
+            <p>Songs!</p> 
 			<input type="text" placeholder="Seperate multiple songs with a comma!" required="false" name="songs" v-model="songs" />
 
 			<input type="submit" />
